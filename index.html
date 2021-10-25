@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--  -->
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing</title>
+
+  <!-- This line is money! It points your HTML to the CSS file. -->
+  <!-- Notice the "relative" pathway? It matches a file inside our current directory's "assets" folder. Open it to see our style rules. -->
+  <link rel="stylesheet" href="styles3.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+
+</head>
+<body>
+    
+<div id="wrapper" class="d-flex">
+  
+  <div id="sidebar-wrapper" class="border-right"  >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Cities.html">Data <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comp2.html">Comparison</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="Visualizat1.html">Temperature Vs Latitude</a>
+                <a class="dropdown-item" href="Visualizat2.html">Humidity vs Latitude</a>
+                <a class="dropdown-item" href="Visualizat3.html">Cloudiness vs Latitude</a>
+                <a class="dropdown-item" href="Visualizat4.html">Wind Speed vs Latitude</a>
+              </div>
+            </li>
+            
+          </ul>
+          
+        </div>
+      </nav>    
+    <div id="sidebar-heading">Visualization</div>
+      
+      <div class="list-group list-group-flush">
+        
+        <a href="Visualizat1.html">
+          <img  src="Tempvslat.png"
+          width="200" height="200">
+        </a>
+        <a href="Visualizat2.html">          
+          <img src="Humvslat.png"          
+          width="200" height="200">
+        </a>
+        <a href="Visualizat3.html">
+          <img  src="Clouvslat.png"
+          width="200" height="200">
+        </a>
+        <a href="Visualizat4.html">
+          <img  src="WindSpvslat.png"
+          width="200" height="200">
+        </a>
+          
+      </div>
+
+  </div>
+  <div id="content-wrapper">
+    <div class="col-sm-12">
+    <button class="btn btn-info" onclick="toggle()">Info
+      <i class="fas fa-angle-double-left"></i>
+    </button>
+  </div>
+      <div class="container-fluid d-flex flex-column align-items-center">
+        <h1 >Latitude </h1>
+        <div class="col-xs-9 col-sm-9 col-md-12 col-lg-12">
+          <table style="width:100">
+          <tr>
+            <th>
+              <h2 class="bg-info text-blue">Summary:Latitude VS X</h2>
+            </th>
+            
+            
+          </tr>
+          <tr>
+            <td width = "450" height="150">              
+                <p> On this project we are analizing how weather changes as you get closer to the equator.  The data was pulled from OpenWeatherMap API dataset on over 500 cities. To be exact this information was pulled on Monday, ‎September ‎20, ‎2021, ‏‎9:22:27 PM.
+
+                
+                </p>            
+            </td>
+            <td width = "450" height="150">
+              <img  src="Tempvslat.png">
+            </td>
+            
+          </tr>
+          
+          </table>
+        </div>
+        <div class="col-xs-9 col-sm-9 col-md-12 col-lg-12">
+          <table style="width:100">
+            <tr>
+                <td width = "650" height="150">              
+                    <p>After retrieving the data we used Matplotlib to plot different aspects of the weatherin comparison to Latitude. We looked at temperature, cloudiness, humidity and wind speed. We will provide you the data of the 545 Cities used in this project as well as visualizations that are part of this project. We will also show comparisons amont all the weather factors that were compared with the latitude.
+                    
+                    </p>            
+                </td> 
+                <td width = "250" height="150"> </td>                              
+            </tr>
+          </table>
+        </div>
+      </div>
+  </div>  
+</div>
+<script>
+  const toggle=()=>{
+    document.getElementById("sidebar-wrapper").classList.toggle("toggled");
+
+  }
+  
+</script> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
